@@ -1,4 +1,4 @@
-# Default values for chartapigw.
+# Default values for chartbp.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -8,9 +8,46 @@ image:
   repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: regcred
+
+appLabels:
+  app: nginx
+  project: bpay
+  env: staging
+
+service:
+  type: ClusterIP
+  port: 3001
+
+nodeSelector: {}
+
+# Additional volumes on the output Deployment definition.
+volumes:
+- name: nginx-volumes
+  secret:
+    secretName: nginx
+    optional: false
+# - name: foo
+#   secret:
+#     secretName: mysecret
+#     optional: false
+
+
+secretRef: nginx
+
+# Additional volumeMounts on the output Deployment definition.
+volumeMounts:
+- name: nginx-volumes
+  mountPath: "/etc/nginx-volumes"
+  readOnly: true
+# - name: foo
+#   mountPath: "/etc/foo"
+#   readOnly: true
+
+
 nameOverride: ""
 fullnameOverride: ""
 
@@ -39,9 +76,8 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-service:
-  type: ClusterIP
-  port: 80
+
+
 
 ingress:
   enabled: false
@@ -71,14 +107,6 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
-livenessProbe:
-  httpGet:
-    path: /
-    port: http
-readinessProbe:
-  httpGet:
-    path: /
-    port: http
 
 autoscaling:
   enabled: false
@@ -87,20 +115,7 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-# Additional volumes on the output Deployment definition.
-volumes: []
-# - name: foo
-#   secret:
-#     secretName: mysecret
-#     optional: false
 
-# Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
-# - name: foo
-#   mountPath: "/etc/foo"
-#   readOnly: true
-
-nodeSelector: {}
 
 tolerations: []
 
