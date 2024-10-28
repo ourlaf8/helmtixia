@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  chartapigw:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-28T16:29:42.358860396+07:00"
+    description: A Helm chart for Kubernetes
+    digest: c0eee0280c232e7fcb3cf6e7206d95bb003eee987da1cfbaa2f5c414a13870d6
+    name: chartapigw
+    type: application
+    urls:
+    - chartapigw-0.1.0.tgz
+    version: 0.1.0
+  chartgo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-28T16:32:14.305926269+07:00"
+    description: A Helm chart for Kubernetes
+    digest: 78345cf558963b7b2718ac1089852aa21e504a1e0451dda5f9744dc93d8d2178
+    name: chartgo
+    type: application
+    urls:
+    - chartgo-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-10-28T16:29:42.358187486+07:00"
