@@ -18,9 +18,6 @@ metadata:
   name: {{ $fullName }}
   labels:
     {{- include "chartgov2.labels" . | nindent 4 }}
-    app: {{ .Values.appLabels.app }}
-    project: {{ .Values.appLabels.project }}
-    env: {{ .Values.appLabels.env }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}

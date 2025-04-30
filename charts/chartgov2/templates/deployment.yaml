@@ -4,9 +4,6 @@ metadata:
   name: {{ include "chartgov2.fullname" . }}
   labels:
     {{- include "chartgov2.labels" . | nindent 4 }}
-    app: {{ .Values.appLabels.app }}
-    project: {{ .Values.appLabels.project }}
-    env: {{ .Values.appLabels.env }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}

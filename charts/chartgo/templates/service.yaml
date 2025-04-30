@@ -1,12 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.appLabels.app }}
+  name: {{ include "chartapigw.fullname" . }}
   labels:
     {{- include "chartgo.labels" . | nindent 4 }}
-    app: {{ .Values.appLabels.app }}
-    project: {{ .Values.appLabels.project }}
-    env: {{ .Values.appLabels.env }}
 spec:
   type: {{ .Values.service.type }}
   ports:
