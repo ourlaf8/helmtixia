@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "chartapigw.fullname" . }}
+  name: {{ include "chartgo.fullname" . }}
   labels:
     {{- include "chartgo.labels" . | nindent 4 }}
 spec:

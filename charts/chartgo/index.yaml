@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  chartgo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-04-30T08:23:31.171547164Z"
+    description: A Helm chart for Kubernetes
+    digest: 1e0a865084ad305ee3bcea402c7037c73d1d47dbdf90ba7eed8dc6f84bc0327e
+    name: chartgo
+    type: application
+    urls:
+    - chartgo-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-04-30T08:23:31.170821381Z"
