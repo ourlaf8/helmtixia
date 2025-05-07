@@ -136,3 +136,5 @@ tolerations: []
 affinity: {}
 
 secretRef: nginx
+
+appName: nginx
