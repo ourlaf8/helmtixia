@@ -105,21 +105,14 @@ autoscaling:
 
 
 # Additional volumes on the output Deployment definition.
-volumes:
-- name: nginx-volumes
-  secret:
-    secretName: nginx
-    optional: false
+volumes: []
 # - name: foo
 #   secret:
 #     secretName: mysecret
 #     optional: false
 
 # Additional volumeMounts on the output Deployment definition.
-volumeMounts:
-- name: nginx-volumes
-  mountPath: "/etc/nginx-volumes"
-  readOnly: true
+volumeMounts: []
 # - name: foo
 #   mountPath: "/etc/foo"
 #   readOnly: true
@@ -130,4 +123,3 @@ tolerations: []
 
 affinity: {}
 
-secretRef: nginx
