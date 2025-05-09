@@ -25,9 +25,9 @@ entries:
   chartgov2:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-05-07T10:04:51.51110309Z"
+    created: "2025-05-09T00:40:52.118465812Z"
     description: A Helm chart for Kubernetes
-    digest: 187a64ff683fe600f36b2d9cac4168e043e9447799128085fa31751c446f7003
+    digest: c469097c8916616f3f7784f4b0e02e8630fc799117a1601bdf06832a1f6b5409
     name: chartgov2
     type: application
     urls:
