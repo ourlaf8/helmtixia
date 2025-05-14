@@ -52,7 +52,8 @@ service:
   # This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
   type: ClusterIP
   # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports
-  port: 3001
+  port: 8080
+  nodePort: 8080
 
 # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ingress:
